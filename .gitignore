@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtualenv
+venv/
+env/
+*.env
+*.env-non-dev
+
+
+# Docker
+*.log
+*.bak
+
+# IDE and Editor files
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
