@@ -22,6 +22,6 @@ class Settings(BaseSettings):
     RANDOM_USER_API_URL: str
 
     class Config:
-        env_file = ".env"
+        env_file = ".env-non-dev"
 
 settings = Settings()

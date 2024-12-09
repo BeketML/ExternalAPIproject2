@@ -1,8 +1,10 @@
-version: '3.7'
+
 
 services:
   db:
     image: postgres:16
+    networks:
+      - app-network
     container_name: test_project_db
     env_file:
       - .env-non-dev
@@ -10,6 +12,8 @@ services:
       - 5432:5432
 
   app:
+    networks:
+      - app-network
     image: test_project_image
     build:
       context: .
@@ -21,3 +25,6 @@ services:
     command: ["/test_project/docker/app.sh"]
     ports:
       - 7777:8000
+
+networks:
+  app-network:
